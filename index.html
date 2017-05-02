@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Нёрдс</title>
   </head>
@@ -17,7 +18,7 @@
             <nav class="main_navigation">
                 <ul>
                     <li>
-                        <a href="#">Студия</a>
+                        <a class="active" href="#">Студия</a>
                     </li>
                     <li>
                         <a href="#">Клиенты</a>
@@ -72,7 +73,7 @@
                     <div class="slide">
                         <div class="slide_discription">
                             <div class="slide_title">
-                                Только ночь, только хардкор
+                                Только ночь,<br> только хардкор
                             </div>
                             <p>
                                 Работать ночью, как все? Мы против этого.<br>
@@ -112,7 +113,7 @@
                 <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет
                     превыше креатива. Работаем не покладая рук, как роботы.
                 </p>
-                <b>Выполняем заказы на разрабтку:</b>
+                <b>Выполняем заказы на разработку:</b>
                 <ul>
                     <li>Веб-сайтов любой сложности</li>
                     <li>Мобильных приложений для iOS и Android</li>
@@ -122,20 +123,20 @@
             <div class="about_us_right">
                 <img src="img/about_us_right.jpg" width="360" height="208" alt="О нас">
                 <b>С 2004 года любим точность во всем:</b>
-                <div class="advantages clearfix">
-                    <div class="advantage">
-                        <p class="percent">146<sup>%</sup></p>
+                <ul class="advantages clearfix">
+                    <li class="advantage">
+                        <div class="percent">146<sup>%</sup></div>
                         <p>Уровень самоотдачи</p>
-                    </div>
-                    <div class="advantage">
-                        <p class="percent">100<sup>%</sup></p>
+                    </li>
+                    <li class="advantage">
+                        <div class="percent">100<sup>%</sup></div>
                         <p>Соблюдение сроков</p>
-                    </div>
-                    <div class="advantage">
-                        <p class="percent">50<sup>%</sup></p>
+                    </li>
+                    <li class="advantage">
+                        <div class="percent">50<sup>%</sup></div>
                         <p>Минимальная предоплата</p>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
         <section class="portfolio">
