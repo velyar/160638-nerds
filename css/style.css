@@ -21,8 +21,7 @@ body {
 }
 
 .hide_header {
-    position: absolute;
-    left: 1000px;
+    display: none;
 }
 
 .main_header {
@@ -547,4 +546,75 @@ body {
 
 .portfolio img:hover {
     opacity: 1;
+}
+
+.footer_map {
+    position: relative;
+    margin-top: 81px;
+    height: 416px;
+    background: url("../img/map.jpg") center;
+    background-color: #e9e5dc;
+    overflow: hidden;
+}
+
+.footer_map iframe {
+    width: 100%;
+    height: 416px;
+    border: 0px;
+}
+
+.footer_map .container {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+
+.address {
+    position: absolute;
+    top: 55px;
+    width: 268px;
+    height: 305px;
+    padding-left: 50px;
+    background-color: #ffffff;
+}
+
+.address h3 {
+    margin-top: 0px;
+    padding-top: 47px;
+    padding-bottom: 0px;
+    text-transform: uppercase;
+}
+
+.address p {
+    padding-top: 4px;
+    line-height: 18px;
+}
+
+.address .btn_address {
+    display: block;
+    width: 218px;
+    margin-top: 37px;
+    padding-top: 10px;
+    padding-bottom: 11px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #fb565a;
+    border-top: 3px solid #fb565a;
+    border-radius: 3px;
+}
+
+.address .btn_address:hover {
+    border-top: 3px solid #e74246;
+    background-color: #e74246;
+}
+
+.address .btn_address:active {
+    border-top: 3px solid #c13135;
+    color: rgba(255, 255, 255, 0.3);
+    background-color: rgb(215, 55, 59);
 }
