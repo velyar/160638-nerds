@@ -734,8 +734,8 @@ body {
     text-align: center;
 }
 
-.main_catalog .container {
-    margin-top: 37px;
+.main_catalog {
+    margin-top: -26px;
 }
 
 .container_filters {
@@ -796,7 +796,7 @@ body {
     background-color: #ababab;
     border: 8px solid #ffffff;
     border-radius: 50%;
-    box-shadow: 0 2px 1px 0 #cfcfcf;
+    box-shadow: 0px 2px 1px 0px #cfcfcf;
     cursor: pointer;
 }
 
@@ -813,7 +813,7 @@ body {
 }
 
 .price_controls label {
-    display: block;
+    display: inline-block;
     width: 50%;
     vertical-align: middle;
     font-size: 16px;
@@ -922,70 +922,214 @@ body {
     margin-bottom: 31px;
 }
 
-.features_filter ul {
-    list-style-type: none;
-    padding: 0px;
-}
-
-.features_filter input[type=checkbox] {
+.features_filter input[type="checkbox"] {
     display: none;
 }
 
-.features_filter input[type=checkbox] ~ label {
+.features_filter legend {
+    margin-left: 1px;
+    margin-bottom: 14px;
+}
+
+.features_filter ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.features_filter li {
+    margin-bottom: 16px;
+}
+
+.features_filter label {
+    color: #283136;
+}
+
+.features_filter .filter_checkbox {
     position: relative;
-    display: block;
-    margin: 10px 0px;
-    padding-left: 35px;
-    padding-bottom: 10px;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 20px;
+    padding-left: 37px;
     cursor: pointer;
 }
 
-.features_filter input[type=checkbox] ~ label:hover {
+.features_filter .checkbox_indication {
+    position: absolute;
+    top: -1px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #b8b8b8;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.features_filter .checkbox_indication::after {
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    display: none;
+    width: 21px;
+    height: 5px;
+    content: "";
+    background-color: #b8b8b8;
+    border: 2px solid #ffffff;
+    transform: rotate(-45deg);
+    z-index: 2;
+}
+
+.features_filter .checkbox_indication::before {
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    display: none;
+    width: 12px;
+    height: 5px;
+    content: "";
+    background-color: #b8b8b8;
+    transform: rotate(45deg);
+    z-index: 3;
+}
+
+.features_filter input[type=checkbox]:checked ~ .filter_checkbox .checkbox_indication::after,
+.features_filter input[type=checkbox]:checked ~ .filter_checkbox .checkbox_indication::before {
+    display: block;
+}
+
+.features_filter .filter_checkbox:hover {
     color: #000000;
 }
 
-.features_filter input[type=checkbox] ~ label:active {
-    color: #ededed;
+.features_filter .filter_checkbox:hover .checkbox_indication {
+    border-color: #4d4d4d;
 }
 
-.features_filter input[type=checkbox] ~ label::before {
-    position: absolute;
-    top: -1px;
-    left: 1px;
-    width: 23px;
-    height: 23px;
-    content: "";
-    background-image: url("../img/sprite.png");
-    background-repeat: no-repeat;
-    background-position: -10px -45px;
-    opacity: 0.6;
+.features_filter .filter_checkbox:hover .checkbox_indication::after,
+.features_filter .filter_checkbox:hover .checkbox_indication::before {
+    background-color: #4d4d4d;
 }
 
-.features_filter input[type=checkbox]:hover ~ label::before {
-    opacity: 1;
-}
-
-.features_filter input[type=checkbox]:active ~ label::before {
+input[type=checkbox]:disabled ~ .filter_checkbox {
     opacity: 0.3;
 }
 
-.features_filter input[type=checkbox]:checked ~ label::before {
-    position: absolute;
-    top: -1px;
-    left: 1px;
-    width: 23px;
-    height: 23px;
-    content: "";
-    background-image: url("../img/sprite.png");
-    background-repeat: no-repeat;
-    background-position: -10px -45px;
+input[type=checkbox]:disabled ~ .filter_checkbox:hover {
+    color: #283136;
+}
+
+input[type=checkbox]:disabled ~ .filter_checkbox:hover .checkbox_indication {
+    border-color: #b8b8b8;
+}
+
+input[type=checkbox]:disabled ~ .filter_checkbox:hover .checkbox_indication::after,
+input[type=checkbox]:disabled ~ .filter_checkbox:hover .checkbox_indication::before {
+    background-color: #b8b8b8;
+}
+
+.submit_btn {
+    padding: 16px 87px 14px 88px;
+    font-size: 16px;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 18px;
+    color: #000000;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #eeeeee;
+    border: 1px solid #eeeeee;
+}
+
+.submit_btn:hover {
+    background-color: #dfdfdf;
+    border-color: #dfdfdf;
+}
+
+.submit_btn:active {
+    padding-top: 14px;
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #d5d5d5;
+    border-color: #d5d5d5;
+    border-top: 3px solid #bfbfbf;
+}
+
+.submit_btn:focus {
+    outline: none;
 }
 
 .container_templates {
     float: right;
     width: 760px;
     margin-left: 140px;
+}
+
+.sorting_templates span {    
+    float: left;
+    font-size: 18px;
+    line-height: 18px;
+    color: #000000;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.sorting_arrows {
+    float: right;
+}
+
+.sorting_arrows button {
+    display: inline-block;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+}
+
+.sorting_arrows .down {
+    margin-top: 27px;
+    margin-right: 17px;
+    padding: 0px;
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid #000000;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    opacity: 0.3;
+}
+
+.sorting_arrows .down:hover {
+    opacity: 0.6;
+}
+
+.sorting_arrows .down:active {
+    opacity: 1;
+}
+
+.sorting_arrows .up {
+    margin-right: -2px;
+    padding: 0px;
+    vertical-align: middle;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #000000;
+    border-left: 5px solid transparent;
+    opacity: 0.3;
+}
+
+.sorting_arrows .up:hover {
+    opacity: 0.6;
+}
+
+.sorting_arrows .up:active {
+    opacity: 1;
+}
+
+.sorting_arrows .active {
+    opacity: 1;
+}
+
+.sorting_type a {
+    display: block;
+    float: left;
+    margin-top: 20px;
+    padding-left: 24px;
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: 0.3;
 }

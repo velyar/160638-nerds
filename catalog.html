@@ -41,7 +41,7 @@
     </header>
     <main class="main_catalog container clearfix">
         <div class="container_filters">
-            <form class="filters" action="https://echo.htmlacademy.ru" method="post">
+            <form action="https://echo.htmlacademy.ru" method="post">
                 <fieldset class="range_filter">
                     <legend>Стоимость:</legend>
                     <div class="range_controls">
@@ -53,7 +53,7 @@
                     </div>
                     <div class="price_controls">
                         <label class="min_price">от <input type="text" name="min_price" value="0"></label>
-                        <label class="max_price">до <input type="text" name="max_price" value="15000"></label>
+                        <label class="max_price">до <input type="text" name="max_price" value="15 000"></label>
                     </div>
                 </fieldset>
                 <fieldset class="radio_filter">
@@ -78,27 +78,42 @@
                     <ul>
                         <li>
                             <input type="checkbox" name="feature" value="slider" id="slider" checked>
-                            <label for="slider">Слайдер</label>
+                            <label class="filter_checkbox" for="slider">
+                                <span class="checkbox_indication"></span>
+                                Слайдер
+                            </label>
                         </li>
                         <li>
                             <input type="checkbox" name="feature" value="advantages" id="advantages">
-                            <label for="advantages">Блок преимуществ</label>
+                            <label class="filter_checkbox" for="advantages">
+                                <span class="checkbox_indication"></span>
+                                Блок преимуществ
+                            </label>
                         </li>
                         <li>
                             <input type="checkbox" name="feature" value="news" id="news" checked>
-                            <label for="news">Новости</label>
+                            <label class="filter_checkbox" for="news">
+                                <span class="checkbox_indication"></span>
+                                Новости
+                            </label>
                         </li>
                         <li>
                             <input type="checkbox" name="feature" value="gallery" id="gallery">
-                            <label for="gallery">Галерея</label>
+                            <label class="filter_checkbox" for="gallery">
+                                <span class="checkbox_indication"></span>
+                                Галерея
+                            </label>
                         </li>
                         <li>
                             <input type="checkbox" name="feature" value="basket" id="basket">
-                            <label for="basket">Корзина</label>
+                            <label class="filter_checkbox" for="basket">
+                                <span class="checkbox_indication"></span>
+                                Корзина
+                            </label>
                         </li>
                     </ul>
                 </fieldset>
-                <input type="submit" value="Показать">
+                <button class="submit_btn" type="submit">Показать</button>
             </form>
         </div>
         <div class="container_templates">
