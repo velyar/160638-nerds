@@ -141,7 +141,7 @@
         </section>
         <section class="portfolio">
             <!--<h2 class="hide_header">Наши клиенты</h2>-->
-            <a href="#">
+            <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
                 <img src="img/portfolio_1.png" width="199" height="68" alt="HTML Academy">
             </a>
             <a href="#">
@@ -157,13 +157,13 @@
     </main>
     <footer class="container_footer">
         <div class="footer_map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651568!2d30.320894615867413!3d59.938794181876276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+191186!5e0!3m2!1sen!2sru!4v1479744450196" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59910436516!2d30.320894616394266!3d59.93879418187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1494491050123" allowfullscreen></iframe>
             <div class="container">
                 <div class="address">
                     <h3>Nёrds design studio</h3>
                     <p>191186, Санкт-Петербург, ул.Б.Конюшенная, д. 19/8</p>
                     <p>тел. +7 (812) 275-75-75</p>
-                    <a class="btn_address" href="#">Напишите нам</a>
+                    <a class="btn_address" href="feedback.html">Напишите нам</a>
                 </div>
             </div>
         </div>
@@ -182,14 +182,15 @@
         </div>
     </footer>
     <div class="modal_content">
-        <button class="modal_content_close" type="button" name="button">Закрыть</button>
+        <button class="modal_content_close" type="button" title="Закрыть">Закрыть</button>
         <h2 class="modal_content_title">Напишите нам</h2>
         <form class="modal_content_form" action="https://echo.htmlacademy.ru" method="post">
-            <label>Ваше имя:<input class="login_field" type="text" name="login" placeholder="Представьтесь, пожалуйста"></label>
-            <label>Ваш e-mail:<input class="email_field" type="email" name="email" placeholder="Для отправки ответа"></label>
-            <label>Текст письма:<textarea class="area_field" name="message" placeholder="В свободной форме"></textarea></label>
+            <label>Ваше имя:<input class="js_login_field" type="text" name="login" placeholder="Представьтесь, пожалуйста"></label>
+            <label>Ваш e-mail:<input class="js_email_field" type="email" name="email" placeholder="Для отправки ответа"></label>
+            <label>Текст письма:<textarea class="js_area_field" name="message" placeholder="В свободной форме"></textarea></label>
             <button class="btn_modal" type="submit">Отправить</button>
         </form>
     </div>
+    <script src="js/popup.js"></script>
   </body>
 </html>
