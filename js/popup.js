@@ -19,9 +19,9 @@ link.addEventListener("click", function(event) {
 });
 
 close.addEventListener("click", function(event) {
-        event.preventDefault();
-        popup.classList.remove("modal_content_show");
-        popup.classList.remove("modal_error");
+    event.preventDefault();
+    popup.classList.remove("modal_content_show");
+    popup.classList.remove("modal_error");
 });
 
 form.addEventListener("submit", function(event) {
@@ -36,7 +36,7 @@ form.addEventListener("submit", function(event) {
 });
 
 window.addEventListener("keydown", function(event) {
-        if (event.keyCode === 27) {
+    if (event.keyCode === 27) {
           if (popup.classList.contains("modal_content_show")) {
             popup.classList.remove("modal_content_show");
             popup.classList.remove("modal_error");
